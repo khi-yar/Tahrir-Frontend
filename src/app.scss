@@ -1,0 +1,60 @@
+@import './assets/font';
+@import './assets/global';
+
+.app {
+  font-family: "IRANSans" !important;
+  direction: rtl !important;
+  text-align: justify;
+  min-height: 100vh;
+  padding: 1rem;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    width: 100%;
+    background: linear-gradient(to top right, #66ffcc 0%, #3399ff 100%);
+    color: white !important;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: white 0.3rem solid;
+    box-shadow: 0rem 1rem 5rem -2rem darkslategrey;
+  }
+}
+
+button, label, input {
+  font-family: $iransans !important;
+}
+
+.w-95 {
+  width: 90% !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.text-dark-blue {
+  color: #111b41;
+}
+
+.text-gray {
+  color: #aaa;
+}
+
+.ltr {
+  direction: ltr !important;
+}
+
+.font-weight-light {
+  font-weight: 300 !important;
+}
+
+.dashed-underline-gray {
+  border-bottom: 1px dashed #aaa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+}
