@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import useAxios from "axios-hooks";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import { Loading } from "../index"
+import Rating from "react-rating"
+import USERLOGO from "assets/img/user-logo.png";
+
+import "./style.scss";
 
 export default ({ comments, word, lang, translation }) => {
   const [name, setName] = useState("");
@@ -14,6 +18,11 @@ export default ({ comments, word, lang, translation }) => {
   }, {manual: true});
 
   console.log(data, loading, error)
+
+  if(loading) 
+    return (
+      <Loading />
+    )
 
   return (
     <Row>
@@ -28,12 +37,29 @@ export default ({ comments, word, lang, translation }) => {
       ) : (
         <>
           {comments.map(comment => {
-            return <Col>اطلاعات کامنت</Col>;
+            return <Col xs={12} className="comment-section mb-4">
+              <Row>
+                <Col>
+                <img src={USERLOGO} width="30" height="30" />
+                <span>{comment.submitter_name}</span></Col>
+                <Col>
+                  <div className="float-left">
+                    <Rating 
+                      initialRating={comment.rating} 
+                      emptySymbol={<i class="far fa-star"></i>}
+                      fullSymbol={<i class="fas fa-star"></i>}
+                      readonly
+                    />
+                  </div>
+                </Col>
+              </Row>
+              <Row className="m-3">{comment.comment}</Row>
+            </Col>;
           })}
         </>
       )}
 
-      <Form as={Col}>
+      <Form className="w-100">
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>نام</Form.Label>
           <Form.Control
@@ -74,6 +100,7 @@ export default ({ comments, word, lang, translation }) => {
           onClick={() =>
             callable({
               data: {
+                name,
                 word,
                 lang,
                 translation,

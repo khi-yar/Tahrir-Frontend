@@ -26,7 +26,7 @@ export default props => {
       ) : null}
       {data ? (
         <Row>
-          {data.translations.slice(0, 3).map(item => {
+          {data.translations.slice(0, 10).map(item => {
             return (
               <Col
                 key={item.translation}

@@ -1,24 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.e5e9674f.chunk.css",
-    "main.js": "/static/js/main.6c8c2915.chunk.js",
-    "main.js.map": "/static/js/main.6c8c2915.chunk.js.map",
+    "main.css": "/static/css/main.eb36d1a0.chunk.css",
+    "main.js": "/static/js/main.e01ba100.chunk.js",
+    "main.js.map": "/static/js/main.e01ba100.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.c5541365.js",
     "runtime~main.js.map": "/static/js/runtime~main.c5541365.js.map",
-    "static/js/2.2ad05c08.chunk.js": "/static/js/2.2ad05c08.chunk.js",
-    "static/js/2.2ad05c08.chunk.js.map": "/static/js/2.2ad05c08.chunk.js.map",
+    "static/js/2.fd802285.chunk.js": "/static/js/2.fd802285.chunk.js",
+    "static/js/2.fd802285.chunk.js.map": "/static/js/2.fd802285.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f6c252908bc177feacdd260f78439377.js": "/precache-manifest.f6c252908bc177feacdd260f78439377.js",
+    "precache-manifest.f00d2bf134f90eee4184275ed5bb97b9.js": "/precache-manifest.f00d2bf134f90eee4184275ed5bb97b9.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.e5e9674f.chunk.css.map": "/static/css/main.e5e9674f.chunk.css.map",
-    "static/media/app.scss": "/static/media/hero_top_background.f49e414c.png",
-    "static/media/angle-double-up-solid.svg": "/static/media/angle-double-up-solid.5881d0a9.svg",
-    "static/media/angle-left-solid.svg": "/static/media/angle-left-solid.aad86071.svg",
-    "static/media/first_package_img.png": "/static/media/first_package_img.342e5149.png",
-    "static/media/second_package_img.png": "/static/media/second_package_img.b52be0a5.png",
-    "static/media/third_package_img.png": "/static/media/third_package_img.44dedc76.png",
-    "static/media/thumb1.jpeg": "/static/media/thumb1.81991e2c.jpeg",
-    "static/media/thumb2.jpeg": "/static/media/thumb2.9a4af04b.jpeg",
-    "static/media/thumb3.jpg": "/static/media/thumb3.4bed758e.jpg"
+    "static/css/main.eb36d1a0.chunk.css.map": "/static/css/main.eb36d1a0.chunk.css.map",
+    "static/media/app.scss": "/static/media/IRANSansWeb_UltraLight.bb7ec39f.woff",
+    "static/media/logo.png": "/static/media/logo.cc9cdbe1.png",
+    "static/media/user-logo.png": "/static/media/user-logo.f9ccb60e.png"
   }
 }

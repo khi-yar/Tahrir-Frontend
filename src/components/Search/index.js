@@ -134,15 +134,20 @@ export default ({ location }) => {
         <Col xs={12} sm={12} md={6} lg={4} className="p-3 ml-auto">
           <button
             onClick={() => {
+              console.log(word, suggestion, lang, name)
               if (isSuggestionMode)
-                callable({
-                  data: {
-                    word: word,
-                    translation: suggestion,
-                    lang: lang === "fa" ? "en" : "fa",
-                    name: name
-                  }
-                });
+                {
+                  callable({
+                    data: {
+                      word: word,
+                      translation: suggestion,
+                      lang: lang,
+                      name: name
+                    }
+                  });
+                  setSuggestionMode(false);
+                  setIsSubmit(false);  
+                }
               else setIsSubmit(true);
             }}
             className={`btn btn-primary mx-auto my-1 ${isSuggestionMode &&

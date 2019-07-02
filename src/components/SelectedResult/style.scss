@@ -1,0 +1,13 @@
+.comment-section {
+  background: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  & div {
+    
+    span {
+      margin-right: 1rem;
+    }
+  }
+}
