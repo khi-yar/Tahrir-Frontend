@@ -7,7 +7,7 @@ import USERLOGO from "assets/img/user-logo.png";
 
 import "./style.scss";
 
-export default ({ comments, word, lang, translation }) => {
+export default ({ comments, word, lang, translation, refetch }) => {
   const [name, setName] = useState("");
   const [rate, setRate] = useState(0);
   const [opinion, setOpinion] = useState("");
@@ -17,11 +17,16 @@ export default ({ comments, word, lang, translation }) => {
     method: "post"
   }, {manual: true});
 
-  console.log(data, loading, error)
+  useEffect(() => {
+    // if(loading === false)
+    refetch()
+  }, [loading, comments])
 
-  if(loading) 
+  if(loading && !data) 
     return (
-      <Loading />
+      <div style={{width: '2rem', height: '2rem'}} className="mx-auto my-3">
+        <Loading tiny noMargin />
+      </div>
     )
 
   return (
@@ -96,18 +101,19 @@ export default ({ comments, word, lang, translation }) => {
 
         <Button
           variaty={"primary"}
-          type="submit"
           onClick={() =>
-            callable({
-              data: {
-                name,
-                word,
-                lang,
-                translation,
-                rating: rate,
-                comment: opinion
-              }
-            })
+            {
+              callable({
+                data: {
+                  name,
+                  word,
+                  lang,
+                  translation,
+                  rating: rate,
+                  comment: opinion
+                }
+              })
+            }
           }
           disabled={!rate || !opinion || !name}
         >

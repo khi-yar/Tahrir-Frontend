@@ -8,15 +8,17 @@ import "./style.scss";
 
 export default props => {
   const [selectedResult, setSelectedResult] = useState({});
-  const [{ data, loading, error }] = useAxios({
+  const [{ data, loading, error }, refetch] = useAxios({
     url: `/translation/get?word=${props.word}&lang=${props.lang}`,
     method: "get"
   });
 
   return (
     <>
-      {loading ? (
-        <Loading />
+      {loading && !data ? (
+        <div style={{width: '2rem', height: '2rem'}} className="mx-auto my-3">
+          <Loading tiny noMargin />
+        </div>
       ) : null}
       {error ? (
         <div className="w-100 text-center">
@@ -43,7 +45,7 @@ export default props => {
         </Row>
       ) : null}
       {selectedResult.translation !== undefined ? (
-        <SelectedResult comments={selectedResult.comments} translation={selectedResult.translation} {...props} />
+        <SelectedResult refetch={() => {refetch(); setSelectedResult(selectedResult);}} comments={selectedResult.comments} translation={selectedResult.translation} {...props} />
       ) : null}
     </>
   );

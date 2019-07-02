@@ -171,6 +171,8 @@ export default ({ location }) => {
                 // setIsSubmit(false);
                 // setWord("");
                 setSuggestionMode(!isSuggestionMode);
+                setIsSubmit(true)
+                setWord(word)
               }}
               className={`btn btn-primary mx-auto my-1 float-left ${isSuggestionMode &&
                 "btn-danger"}`}
